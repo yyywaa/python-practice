@@ -23,10 +23,9 @@ def get_answers(question_index):
     index=question_index - 1
     answer=df['答案 '].tolist()[index]
     return answer
-def mistake_record(question_index,check_value):
+def mistake_record(question_index):
     index=question_index - 1
-    if check_value:
-        mistake_index.append(index)
+    mistake_index.append(index)
 
 def run_learning():
     start_index = int(input('请输入上次结束的题号：')) + 1
@@ -41,13 +40,13 @@ def run_learning():
         if not check:
             if 'm' in user_answer:
                 print(f'本题答案为{get_q(index)}')
-                mistake_record(index,check)
+                mistake_record(index)
                 break
 
 
             else:
                 print(f'答案错误，正确答案为{get_answers(index)}')
-                mistake_record(index,check)
+                mistake_record(index)
                 print('已将本题加入错题本！')
         else:
             print('答案正确！')
@@ -79,6 +78,7 @@ if mode=='mistaking':
 
 print('感谢使用本程序，祝您期末顺利！')
 print('制作者：yyy/Cloudra')
+
 
 
 
