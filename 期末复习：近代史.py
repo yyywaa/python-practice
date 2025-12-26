@@ -1,5 +1,5 @@
 import os
-os.system('pip install pandas')
+os.system('pip install pandas') #delete this2 if you had run it
 os.system('pip install xlrd')
 import pandas as pd
 path_raw=r'C:\Users\86188\Desktop\大一期末\大一上\大一上\近代史\长沙理工大学近代史题库.xls长沙理工大学近代史题库(1) (1) (1).xls'
@@ -79,5 +79,6 @@ if mode=='mistaking':
 
 print('感谢使用本程序，祝您期末顺利！')
 print('制作者：yyy/Cloudra')
+
 
 
